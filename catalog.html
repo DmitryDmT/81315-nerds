@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Магазин готовых макетов «Нёрдс»</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container">
+        <div class="nerds-logo">
+          <img src="img/" width="" height="" alt="Нёрдс">  
+        </div>
+        <nav class="main-navigation">
+          <ul>
+            <li>
+              <a href="#">Студия</a>
+            </li>
+            <li>
+              <a href="#">Клиенты</a>
+            </li>
+            <li>
+              <a href="#">Магазин</a>  
+            </li>
+            <li>
+              <a href="#">Контакты</a>  
+            </li>
+          </ul>
+        </nav>
+        <div class="cart-block">
+          <a class="cart" href="#">Корзина</a>
+        </div>
+      </div>
+    </header>
+    <main class="container">
+      <div class="head">
+        <h1 class="shop-welcome">Добро пожаловать в магазин готовых макетов</h1>  
+      </div>
+      <div class="container-forms">
+        <form class="block-form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="range-filter"> <!-- С фильтром-ползунком не разобрался -->
+            <h3 class="index-title">Стоимость:</h3>
+            <div class="range-controls">
+              <div class="scale"><div></div></div>
+              <div class="toggle min-toggle"></div>
+              <div class="toggle max-toggle"></div>
+            </div>
+            <div class="price-controls">
+              от <input class="min-price" type="text" value="0">
+              до <input class="max-price" type="text" value="15000">
+            </div>
+          </div>
+          <div class="block-grid">
+            <h3 class="index-title">Сетка:</h3>
+            <label>
+            <input class="grid-name" type="radio" name="grid" value="adaptive" checked> Адаптивная<br>
+            </label>
+            <label>
+            <input class="grid-name" type="radio" name="grid" value="fixed"> Фиксированная<br>
+            </label>
+            <label>
+            <input class="grid-name" type="radio" name="grid" value="elastic"> Резиновая
+            </label>
+          </div>
+          <div class="block-features">
+            <h3 class="index-title">Особенности:</h3>
+            <label>
+            <input class="feature-name" type="checkbox" name="slider" id="slider-field" checked> Слайдер<br>
+            </label>
+            <label>
+            <input class="feature-name" type="checkbox" name="features-mod" id="features-mod-field"> Блок преимуществ<br>
+            </label>
+            <label>
+            <input class="feature-name" type="checkbox" name="news" id="news-field" checked> Новости<br>
+            </label>
+            <label>
+            <input class="feature-name" type="checkbox" name="gallery" id="gallery-field"> Галерея<br>
+            </label>
+            <label>
+            <input class="feature-name" type="checkbox" name="cart" id="cart-field"> Корзина
+            </label>
+          </div>
+          <button class="btn btn-show">Показать</button>
+        </form>
+      </div>
+      <div class="container-catalog">
+        <div class="sort">
+          <b class="sort-name">Сортировать:</b>
+          <button class="by-price">По цене</button>
+          <button class="by-type">По типу</button>
+          <button class="by-function">По функционалу</button>
+          <button class="sort-down"></button>
+          <button class="sort-up"></button>
+        </div>
+        <div class="layouts">
+          <article class="aviator">
+            <div class="triple-slider"></div>
+            <img src="img/" width="" height="" alt="">  
+          </article>
+          <article class="sunset">
+            <div class="triple-slider"></div>
+            <img src="img/" width="" height="" alt="">
+            <section class="sunset-info">
+              <h3 class="index-title">Sunset</h3>
+              <p>Интернет-магазин с личным кабинетом</p>
+              <a class="btn btn-buy">10000 Р.</a>
+            </section>
+          </article>
+          <article class="forte">
+            <div class="triple-slider"></div>
+            <img src="img/" width="" height="" alt="">  
+          </article>
+          <article class="modern-organic">
+            <div class="triple-slider"></div>
+            <img src="img/" width="" height="" alt="">  
+          </article>
+          <article class="avenue">
+            <div class="triple-slider"></div>
+            <img src="img/" width="" height="" alt="">  
+          </article>
+          <article class="dovetail">
+            <div class="triple-slider"></div>
+            <img src="img/" width="" height="" alt="">  
+          </article>
+        </div>
+        <div class="pages">
+          <a class="page" href="#">1</a>
+          <a class="page" href="#">2</a>
+          <a class="page" href="#">3</a>
+          <a class="next" href="#">Следующая</a>
+        </div>
+      </div>
+    </main>
+    <footer class="main-footer">
+      <div class="container">
+        <a class="map" href="#"></a>
+        <section class="footer-contacts">
+          <b class="title-contacts">NЁRDS DESIGN STUDIO</b>
+          <p>191186, Санкт-Петербург,<br>
+             ул. Б. Конюшенная, д. 19/8</p>
+          <p>тел. +7 (812) 275-75-75</p>
+          <a class="btn link-us">Напишите нам</a>
+        </section>
+        <section class="footer-social">
+          <div class="links">
+            <a class="btn-social btn-social-vk" href="#">Вконтакте</a>
+            <a class="btn-social btn-social-fb" href="#">Facebook</a>
+            <a class="btn-social btn-social-inst" href="#">Инстаграм</a>
+          </div>
+          <div class="friendship">
+            <b class="friend-title">Давайте дружить, это выгодно!</b>
+            <p class="discount">Скидка 10% для друзей из социальных сетей.</p>
+          </div>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>

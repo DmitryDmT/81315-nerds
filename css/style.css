@@ -10,7 +10,7 @@ h1 {
     font-size: 36px;
     line-height: 36px;
     color: #000000;
-    font-weight: bold;
+    font-weight: 500;
     font-family: Roboto;
 }
 
@@ -21,3 +21,256 @@ h3 {
     font-weight: 500;
     font-family: Roboto;
 }
+
+b {
+    font-size: 16px;
+    line-height: 22px;
+    color: #283136;
+    font-weight: 500;
+    font-family: Roboto;
+}
+
+.clearfix::after {
+    content: "";
+    
+    display: table;
+    clear: both;
+}
+
+.container {
+    width: 880px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.nerds-logo {
+    float: left;
+    width: 140px;
+}
+
+.main-navigation {
+    float: left;
+    width: 580px;
+    
+    /*Оформление сеток*/
+    min-height: 59px;
+}
+
+.cart-block {
+    float: right;
+    width: 110px;
+    
+    /*Оформление сеток*/
+    min-height: 59px;
+}
+
+.slider-block {
+    height: 353px;
+    margin-bottom: 80px;
+}
+
+/*Catalog*/
+.head {
+    display: block;
+    
+    text-align: center;
+    height: 172px;
+    padding-top: 74px;
+    margin-bottom: 81px;
+}
+
+/*Catalog*/
+.container-forms {
+    float: left;
+    
+    width: 240px;
+    margin-right: 80px;
+}
+
+/*Catalog*/
+.container-catalog {
+    float: right;
+    
+    padding-top: 18px;
+    width: 560px;
+}
+
+/*Catalog*/
+.sort {
+    margin-bottom: 23px;
+}
+
+/*Catalog*/
+.aviator {
+    float: left;
+    
+    width: 240px;
+    margin-right: 80px;
+    margin-bottom: 80px;
+}
+
+/*Catalog*/
+.sunset {
+    float: right;
+    
+    width: 240px;
+    margin-bottom: 80px;
+}
+
+/*Catalog*/
+.forte {
+    float: left;
+    
+    width: 240px;
+    margin-right: 80px;
+    margin-bottom: 80px;
+}
+
+/*Catalog*/
+.modern-organic {
+    float: right;
+    
+    width: 240px;
+    margin-bottom: 80px;
+}
+
+/*Catalog*/
+.avenue {
+    float: left;
+    
+    width: 240px;
+    margin-right: 80px;
+    margin-bottom: 80px;
+}
+
+/*Catalog*/
+.dovetail {
+    float: right;
+    
+    width: 240px;
+}
+
+/*Catalog*/
+.pages {
+    clear: both;
+    
+    width: 320px;
+    margin-bottom: 80px;
+}
+
+/*Catalog*/
+.page {
+    margin-right: 10px;
+}
+
+/*Catalog*/
+.page:last-child {
+    margin-right: 0;
+}
+
+.offer-block {
+    float: left;
+    
+    width: 481px;
+    padding-top: 76px;
+}
+
+.slider-image-title {
+    float: right;
+    
+    width: 340px;
+    padding-top: 53px;
+}
+
+.order {
+    float: left;
+    
+    width: 240px;
+    margin-right: 80px;
+}
+
+.order p {
+    font-size: 15px;
+}
+
+.order:last-child {
+    margin-right: 0;
+}
+
+.line-orders {
+    margin-top: 80px;
+    margin-bottom: 59px;
+}
+
+.info-nerds {
+    height: 483px;
+    margin-bottom: 31px;
+}
+
+.info-main {
+    float: left;
+    
+    width: 630px;
+    margin-right: 10px;
+    margin-bottom: 51px;
+}
+
+.working-block {
+    float: right;
+    
+    width: 240px;
+}
+
+.line-main {
+    clear: both;
+    
+    margin-bottom: 40px;
+}
+
+.partners {
+    height: 90px;
+}
+
+.partner {
+    float: left;
+    
+    width: 220px;
+    margin-right: 100px;
+}
+
+.partner:last-child {
+    margin-right: 0;
+}
+
+.line-partners {
+    margin-bottom: 86px;
+}
+
+/*Не знаю, как быть с футером. Ошибка в CSS? Ширину не задать совсем :( */
+.main-footer {
+    clear: both;
+}
+
+.footer-contacts {
+    width: 250px;
+    height: 240px;
+    margin-bottom: 89px;
+}
+
+.footer-social {
+    height: 216px;
+}
+
+.links {
+    float: left;
+    
+    width: 300px;
+    margin-right: 20px;
+}
+
+.friendship {
+    float: right;
+    
+    width: 560px;
+}
+

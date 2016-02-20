@@ -2,7 +2,9 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Магазин готовых макетов «Нёрдс»</title>
+    <title>Готовые макеты «Нёрдс»</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:500&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -28,77 +30,69 @@
           </ul>
         </nav>
         <div class="cart-block">
-          <a class="cart" href="#">КОРЗИНА</a>
+          <a class="cart" href="#"><span class="icon-basket"></span>КОРЗИНА</a>
         </div>
       </div>
-    </header>
-    <main class="container">
       <div class="head">
         <h1 class="shop-welcome">ДОБРО ПОЖАЛОВАТЬ В МАГАЗИН<br> ГОТОВЫХ МАКЕТОВ</h1>  
       </div>
-      <div class="container-forms">
-        <form class="block-form" action="https://echo.htmlacademy.ru" method="post">
-          <div class="range-filter"> <!-- С фильтром-ползунком не разобрался -->
-            <h3 class="index-title">СТОИМОСТЬ:</h3>
-            <div class="range-controls">
-              <div class="scale"><div></div></div>
-              <div class="toggle min-toggle"></div>
-              <div class="toggle max-toggle"></div>
-            </div>
-            <div class="price-controls">
-              от <input class="min-price" type="text" value="0">
-              до <input class="max-price" type="text" value="15000">
-            </div>
+    </header>
+    <main class="container clearfix">
+      <form class="block-form" action="https://echo.htmlacademy.ru" method="get">
+        <div class="range-filter">
+          <h3 class="index-title">СТОИМОСТЬ:</h3>
+          <div class="range-controls">
+            <div class="scale"><div></div></div>
+            <div class="toggle min-toggle"></div>
+            <div class="toggle max-toggle"></div>
           </div>
-          <div class="block-grid">
-            <h3 class="index-title">СЕТКА:</h3>
-            <label>
-            <input class="grid-name" type="radio" name="grid" value="adaptive" checked> Адаптивная<br>
-            </label>
-            <label>
-            <input class="grid-name" type="radio" name="grid" value="fixed"> Фиксированная<br>
-            </label>
-            <label>
-            <input class="grid-name" type="radio" name="grid" value="elastic"> Резиновая
-            </label>
+          <div class="price-controls">
+            от <input class="min-price" type="text" value="0">
+            до <input class="max-price" type="text" value="15000">
           </div>
-          <div class="block-features">
-            <h3 class="index-title">ОСОБЕННОСТИ:</h3>
-            <label>
-            <input class="feature-name" type="checkbox" name="slider" id="slider-field" checked> Слайдер<br>
-            </label>
-            <label>
-            <input class="feature-name" type="checkbox" name="features-mod" id="features-mod-field"> Блок преимуществ<br>
-            </label>
-            <label>
-            <input class="feature-name" type="checkbox" name="news" id="news-field" checked> Новости<br>
-            </label>
-            <label>
-            <input class="feature-name" type="checkbox" name="gallery" id="gallery-field"> Галерея<br>
-            </label>
-            <label>
-            <input class="feature-name" type="checkbox" name="cart" id="cart-field"> Корзина
-            </label>
-          </div>
-          <button class="btn btn-show">ПОКАЗАТЬ</button>
-        </form>
-      </div>
+        </div>
+        <div class="block-grid">
+          <h3 class="index-title">СЕТКА:</h3>
+          
+          <input class="grid-name" type="radio" name="grid" id="grid-a" value="adaptive" checked>
+          <label for="grid-a">Адаптивная</label>
+          <input class="grid-name" type="radio" name="grid" id="grid-f" value="fixed"> 
+          <label for="grid-f">Фиксированная</label>
+          <input class="grid-name" type="radio" name="grid" id="grid-e" value="elastic">
+          <label for="grid-e">Резиновая</label>
+        </div>
+        <div class="block-features">
+          <h3 class="index-title">ОСОБЕННОСТИ:</h3>
+          <input class="feature-name" type="checkbox" name="slider" id="slider-field" checked>
+          <label for="slider-field">Слайдер</label>
+          <input class="feature-name" type="checkbox" name="features-mod" id="features-mod-field">
+          <label for="features-mod-field">Блок преимуществ</label>
+          <input class="feature-name" type="checkbox" name="news" id="news-field" checked>
+          <label for="news-field">Новости</label>
+          <input class="feature-name" type="checkbox" name="gallery" id="gallery-field">
+          <label for="gallery-field">Галерея</label>
+          <input class="feature-name" type="checkbox" name="cart" id="cart-field">
+          <label for="cart-field">Корзина</label>
+        </div>
+        <button class="btn btn-show">ПОКАЗАТЬ</button>
+      </form>
       <div class="container-catalog">
         <div class="sort">
           <b class="sort-name">СОРТИРОВАТЬ:</b>
-          <button class="by-price">ПО ЦЕНЕ</button>
-          <button class="by-type">ПО ТИПУ</button>
-          <button class="by-function">ПО ФУНКЦИОНАЛУ</button>
-          <button class="sort-down"></button>
-          <button class="sort-up"></button>
+          <button class="sort-btn by-price">ПО ЦЕНЕ</button>
+          <button class="sort-btn by-type">ПО ТИПУ</button>
+          <button class="sort-btn by-function">ПО ФУНКЦИОНАЛУ</button>
+          <button class="sort-btn sort-dir"><span class="icon-down-dir"></span></button>
+          <button class="sort-btn sort-dir"><span class="icon-up-dir"></span>
+          </button>
         </div>
-        <div class="layouts">
+        <div class="layouts clearfix">
           <article class="aviator">
             <div class="triple-slider"></div>
             <img src="img/shop_aviator.jpg" width="240" height="240" alt="AVIATOR">
             <section class="aviator-info">
               <h3 class="index-title">AVIATOR</h3>
-              <p>Одностраничный макет с авторским дизайном</p>
+              <p>Одностраничный макет<br> с авторским дизайном</p>
               <a class="btn btn-buy">8000 Р.</a>
             </section>
           </article>
@@ -107,7 +101,7 @@
             <img src="img/shop_sunset.jpg" width="240" height="240" alt="SUNSET">
             <section class="sunset-info">
               <h3 class="index-title">SUNSET</h3>
-              <p>Интернет-магазин с личным кабинетом</p>
+              <p>Интернет-магазин<br> с личным кабинетом</p>
               <a class="btn btn-buy">10000 Р.</a>
             </section>
           </article>
@@ -148,9 +142,9 @@
         </section>
         <section class="footer-social clearfix">
           <div class="links">
-            <a class="btn-social btn-social-vk" href="#">Вконтакте</a>
-            <a class="btn-social btn-social-fb" href="#">Facebook</a>
-            <a class="btn-social btn-social-inst" href="#">Инстаграм</a>
+            <a class="btn-social" href="#">Вконтакте <span class="icon-vk"></span></a>
+            <a class="btn-social" href="#">Facebook <span class="icon-facebook"></span></a>
+            <a class="btn-social" href="#">Инстаграм <span class="icon-instagramm"></span></a>
           </div>
           <div class="friendship">
             <b class="friend-title">Давайте дружить, это выгодно!</b>

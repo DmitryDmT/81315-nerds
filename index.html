@@ -150,7 +150,7 @@
           <p>191186, Санкт-Петербург,<br>
              ул. Б. Конюшенная, д. 19/8</p>
           <p>тел. +7 (812) 275-75-75</p>
-          <a class="btn link-us">НАПИШИТЕ НАМ</a>
+          <a class="btn link-us" href="#">НАПИШИТЕ НАМ</a>
         </section>
         <section class="footer-social clearfix">
           <div class="links">
@@ -173,7 +173,7 @@
             Ваше имя:<br>
           </label>
           </p>
-          <input class="user-name" type="text" name="name" id="name-f" placeholder="Представьтесь, пожалуйста">
+          <input class="user-name" type="text" name="name" id="name-f" placeholder="Представьтесь, пожалуйста" required>
           </div>
           <div class="email-block">
             <p class="email-p">
@@ -181,7 +181,7 @@
               Ваш e-mail:<br>
             </label>
             </p>
-            <input class="user-email" type="text" name="email" id="email-f" placeholder="Для отправки ответа">
+            <input class="user-email" type="text" name="email" id="email-f" placeholder="Для отправки ответа" required>
           </div>
           <div class="text-block">
             <p class="text-p">
@@ -189,11 +189,38 @@
               Текст письма:<br>
             </label>
             </p>
-            <textarea class="user-text" name="free-text" id="free-text-f" rows="5" placeholder="В свободной форме"></textarea>
+            <textarea class="user-text" name="free-text" id="free-text-f" rows="5" placeholder="В свободной форме" required></textarea>
           </div><br>
           <button class="btn" type="submit">Отправить</button>
         </form>
       </div>
     </footer>
+    <script>
+      var link = document.querySelector(".link-us");
+      
+      var popup = document.querySelector(".modal-content");
+      var close = popup.querySelector(".modal-content-close");
+        
+      var login = popup.querySelector("[name=name]");
+        
+      link.addEventListener("click", function(event) {
+        event.preventDefault();
+        popup.classList.add("modal-content-show");
+        login.focus();
+      });
+        
+      close.addEventListener("click", function(event) {
+        event.preventDefault();
+        popup.classList.remove("modal-content-show");
+      });
+        
+      window.addEventListener("keydown", function(event) { 
+        if (event.keyCode === 27) {
+          if (popup.classList.contains("modal-content-show")) {
+            popup.classList.remove("modal-content-show");
+          }
+        }
+      });
+    </script>
   </body>
 </html>

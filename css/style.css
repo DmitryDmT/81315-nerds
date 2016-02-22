@@ -1341,6 +1341,15 @@ hr {
     margin-top: 11px;
 }
 /*Всплывающий блок отправки письма*/
+@keyframes move-block {
+    0% {
+        transform: translateX(600px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
 .modal-content {
     position: absolute;
     top: -34px;
@@ -1354,6 +1363,12 @@ hr {
     color: #000000;
     background-color: #ffffff;
     box-shadow: 0 15px 65px 0 rgba(0, 1, 1, 0.75);
+}
+
+.modal-content-show {
+    display: block;
+    animation-name: move-block;
+    animation-duration: 0.5s;
 }
 
 .modal-content-close {

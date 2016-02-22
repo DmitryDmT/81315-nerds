@@ -15,14 +15,14 @@
         </div>
         <nav class="main-navigation">
           <ul>
-            <li>
-              <a href="#">СТУДИЯ</a>
+            <li class="active">
+            <span>СТУДИЯ</span>
             </li>
             <li>
               <a href="#">КЛИЕНТЫ</a>
             </li>
             <li>
-              <a href="#">МАГАЗИН</a>  
+              <a href="catalog.html">МАГАЗИН</a>  
             </li>
             <li>
               <a href="#">КОНТАКТЫ</a>  
@@ -33,16 +33,38 @@
           <a class="cart" href="#"><span class="icon-basket"></span>КОРЗИНА</a>
         </div>
       </div>
-      <div class="container slider-block">
-        <div class="offer-block">
-         <h1 class="slider-title">Долго, дорого,<br>
-             скрупулезно.</h1> 
-         <p>Математически выверенный дизайн<br> для вашего сайта или мобильного приложения.</p>
-         <a class="btn more-btn" href="#">УЗНАТЬ БОЛЬШЕ</a>
+      <div class="container slider">
+        <input type="radio" name="toggle" id="btn-1" checked>
+        <input type="radio" name="toggle" id="btn-2">
+        <input type="radio" name="toggle" id="btn-3">
+        <div class="slider-controls">
+          <label for="btn-1"></label>
+          <label for="btn-2"></label>
+          <label for="btn-3"></label>
         </div>
-        <div class="slider-image-title">
-            <img src="img/technique_first_slide.png" width="340" height="232" alt="Техника">
-        </div>  
+        <div class="slides">
+          <div class="slide">
+            <div class="slide-text">
+              <div class="slide-title">Долго, дорого,<br>скрупулезно</div>
+              <p>Математически выверенный дизайн<br>для вашего сайта или мобильного приложения.</p>
+              <a class="btn more-btn" href="#">УЗНАТЬ БОЛЬШЕ</a>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-text">
+              <div class="slide-title">Любите ли вы математику,<br> как любим ее мы?</div>
+              <p>Нашим дизайнерам мы удаляем нейроны, ответственные<br>за креатив, чтобы дать им возможность все просчитать.</p>
+              <a class="btn more-btn" href="#">Узнать больше</a>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-text">
+              <div class="slide-title">Только наркотики,<br> только хардкор!</div>
+              <p>Все дизайнерские решения в нашей компании принимаются только под воздействием качественных галлюциногенов.</p>
+              <a class="btn more-btn" href="#">Узнать больше</a>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
     <main class="container clearfix">
@@ -118,9 +140,11 @@
       </div>
       <hr class="line-partners">
     </main>
-    <footer class="main-footer"> <!-- Что насчёт футера? -->
+    <footer class="main-footer">
       <div class="container clearfix">
-        <a class="map" href="#">M</a>
+        <div class="map">
+          <img src="img/map.jpg" width="1199" height="416" alt="Карта">
+        </div>
         <section class="footer-contacts">
           <b class="title-contacts">NЁRDS DESIGN STUDIO</b>
           <p>191186, Санкт-Петербург,<br>
@@ -139,6 +163,36 @@
             <p class="discount">Скидка 10% для друзей из социальных сетей.</p>
           </div>
         </section>
+      </div>
+      <div class="modal-content">
+        <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+        <form class="message-form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="name-block">
+          <p class="name-p">
+          <label for="name-f">
+            Ваше имя:<br>
+          </label>
+          </p>
+          <input class="user-name" type="text" name="name" id="name-f" placeholder="Представьтесь, пожалуйста">
+          </div>
+          <div class="email-block">
+            <p class="email-p">
+            <label for="email-f">
+              Ваш e-mail:<br>
+            </label>
+            </p>
+            <input class="user-email" type="text" name="email" id="email-f" placeholder="Для отправки ответа">
+          </div>
+          <div class="text-block">
+            <p class="text-p">
+            <label for="free-text-f">
+              Текст письма:<br>
+            </label>
+            </p>
+            <textarea class="user-text" name="free-text" id="free-text-f" rows="5" placeholder="В свободной форме"></textarea>
+          </div><br>
+          <button class="btn" type="submit">Отправить</button>
+        </form>
       </div>
     </footer>
   </body>

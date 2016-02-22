@@ -4,7 +4,7 @@ body {
     line-height: 22px;
     color: #283136;
     font-weight: ;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", "Arial", sans-serif;
 }
 
 @font-face {
@@ -53,7 +53,7 @@ h1 {
     line-height: 36px;
     color: #000000;
     font-weight: 500;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", "Arial", sans-serif;
 }
 
 h3 {
@@ -61,7 +61,7 @@ h3 {
     line-height: 30px;
     color: #000000;
     font-weight: 500;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", "Arial", sans-serif;
 }
 
 b {
@@ -69,7 +69,7 @@ b {
     line-height: 22px;
     color: #283136;
     font-weight: 500;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", "Arial", sans-serif;
 }
 
 .clearfix::after {
@@ -314,7 +314,7 @@ b {
     padding: 8px 10px;
     margin-left: 10px;
     
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", "Arial", sans-serif;
     font-size: 16px;
     text-align: center;
     
@@ -886,7 +886,7 @@ input[type="checkbox"]:checked:hover + label::before {
     padding: 12px 0;
     font-size: 12px;
     line-height: 18px;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", "Arial", sans-serif;
     font-weight: 300;
     color: #ffffff;
     
@@ -1427,7 +1427,7 @@ hr {
     
     font-size: 12px;
     line-height: 18px;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", "Arial", sans-serif;
     text-transform: uppercase;
     color: #000000;
     

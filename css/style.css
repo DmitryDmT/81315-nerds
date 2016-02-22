@@ -1343,10 +1343,10 @@ hr {
 /*Всплывающий блок отправки письма*/
 @keyframes move-block {
     0% {
-        transform: translateX(600px);
+        transform: translateY(-350px);
     }
     100% {
-        transform: translateX(0);
+        transform: translateY(0);
     }
 }
 

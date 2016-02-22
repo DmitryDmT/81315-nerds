@@ -1,4 +1,4 @@
-body {
+﻿body {
     min-width: 900px;
     font-size: 16px;
     line-height: 22px;
@@ -1343,7 +1343,7 @@ hr {
 /*Всплывающий блок отправки письма*/
 @keyframes move-block {
     0% {
-        transform: translateY(-350px);
+        transform: translateY(-345px);
     }
     100% {
         transform: translateY(0);

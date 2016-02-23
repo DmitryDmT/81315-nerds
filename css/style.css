@@ -3,7 +3,6 @@ body {
     font-size: 16px;
     line-height: 22px;
     color: #283136;
-    font-weight: ;
     font-family: "Roboto", "Arial", sans-serif;
 }
 
@@ -18,11 +17,11 @@ body {
 
 [class^="icon-"]::before,
 [class*=" icon-"]::before {
-  display: inline-block;
+  display: inline-block; /*Не знаю, можно ли добавлять сюда vertical-align*/
   width: 1em;
   margin-right: 0.2em;
   margin-left: 0.2em;
-
+                        /*На все строчно-блочные элементы, касающиеся иконочных шрифтов, проставлен vertical-align*/
   font-weight: normal;
   line-height: 1em;
   font-family: "symbols-nerds";
@@ -53,7 +52,6 @@ h1 {
     line-height: 36px;
     color: #000000;
     font-weight: 500;
-    font-family: "Roboto", "Arial", sans-serif;
 }
 
 h3 {
@@ -61,7 +59,6 @@ h3 {
     line-height: 30px;
     color: #000000;
     font-weight: 500;
-    font-family: "Roboto", "Arial", sans-serif;
 }
 
 b {
@@ -69,7 +66,6 @@ b {
     line-height: 22px;
     color: #283136;
     font-weight: 500;
-    font-family: "Roboto", "Arial", sans-serif;
 }
 
 .clearfix::after {
@@ -185,7 +181,7 @@ b {
 }
 
 .cart {
-    position: relative;
+    position: absolute;
     
     display: inline-block;
     margin-top: 55px;
@@ -243,6 +239,7 @@ b {
     float: left;
     
     width: 240px;
+    margin-top: -5px;
     margin-right: 80px;
 }
 
@@ -307,6 +304,8 @@ b {
     display: inline-block;
     width: 50%;
     font-size: 16px;
+    
+    vertical-align: top;
 }
 
 .price-controls input {
@@ -479,7 +478,6 @@ input[type="checkbox"]:checked:hover + label::before {
 }
 /*Catalog Сортировка*/
 .sort {
-    position: relative;
     margin-bottom: 23px;
     font-size: 12px;
     line-height: 18px;
@@ -519,7 +517,7 @@ input[type="checkbox"]:checked:hover + label::before {
 .by-function {
     margin-right: 75px;
 }
-/*ЧТО ДЕЛАТЬ С СОРТИРОВОЧНЫМИ НАПРАВЛЯЮЩИМИ?*/
+
 .sort-dir {
     float: right;
     position: relative;
@@ -569,42 +567,48 @@ input[type="checkbox"]:checked:hover + label::before {
     color: #00ca74;
 }
 /*Catalog Слайдер изображений макетов*/
-.triple-slider::before {
-    content: "";
-    display: block;
+
+
+.triple-slider {
     position: relative;
-    
     width: 240px;
     height: 30px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    
-    background-color: #f1f1f1;
+    top: px;
+    background-image: url(../img/browser.jpg);
+    background-repeat: no-repeat;
+    opacity: 0.1;
+}
+/*background макетов*/
+.aviator .lay-block {
+    height: 240px;
+    background-color: #765136;
 }
 
-.triple-slider input[type="radio"] {
-    display: none;
+.sunset .lay-block {
+    height: 240px;
+    background-color: #fcf7da;
 }
 
-.layout-slider {
-    position: absolute;
-    top: 10px;
-    left: 13px;
+.forte .lay-block {
+    height: 240px;
+    background-color: #cbdee2;
 }
 
-.layout-slider label {
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    margin: 0 3px 0 0;
-    
-    vertical-align: top;
-    
-    background-color: #ffffff;
-    border: 2px solid #ffffff;
-    border-radius: 50%;
-    cursor: pointer;
+.modern-organic .lay-block {
+    height: 240px;
+    background-color: #6e2202;
 }
+
+.avenue .lay-block {
+    height: 240px;
+    background-color: #d4d8dc;
+}
+
+.dovetail .lay-block {
+    height: 240px;
+    background-color: #f7f4e8;
+}
+
 /*Catalog Авиатор*/
 .aviator {
     float: left;
@@ -613,6 +617,7 @@ input[type="checkbox"]:checked:hover + label::before {
     width: 240px;
     height: 270px;
     
+    margin-top: px;
     margin-right: 80px;
     margin-bottom: 80px;
 }
@@ -648,8 +653,8 @@ input[type="checkbox"]:checked:hover + label::before {
     display: block;
 }
 
-.aviator:hover .triple-slider::before {
-    background-color: #797979;
+.aviator:hover .triple-slider {
+    opacity: 1;
 }
 /*Catalog Сансет*/
 .sunset {
@@ -693,8 +698,8 @@ input[type="checkbox"]:checked:hover + label::before {
     display: block;
 }
 
-.sunset:hover .triple-slider::before {
-    background-color: #797979;
+.sunset:hover .triple-slider {
+    opacity: 1;
 }
 /*Catalog Форте*/
 .forte {
@@ -707,6 +712,41 @@ input[type="checkbox"]:checked:hover + label::before {
     margin-right: 80px;
     margin-bottom: 80px;
 }
+
+.forte-info {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    
+    width: 200px;
+    height: 200px;
+    
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.forte-info h3 {
+    font-size: 18px;
+    line-height: 18px;
+    margin-top: 36px;
+    margin-bottom: 18px;
+}
+
+.forte-info p {
+    width: 200px;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 28px;
+}
+
+.forte:hover .forte-info {
+    display: block;
+}
+
+.forte:hover .triple-slider {
+    opacity: 1;
+}
 /*Catalog Модерн Органик*/
 .modern-organic {
     float: right;
@@ -716,6 +756,41 @@ input[type="checkbox"]:checked:hover + label::before {
     height: 270px;
     
     margin-bottom: 80px;
+}
+
+.modern-org-info {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    
+    width: 200px;
+    height: 200px;
+    
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.modern-org-info h3 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 36px;
+}
+
+.modern-org-info p {
+    width: 200px;
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: -13px;
+    margin-bottom: 14px;
+}
+
+.modern-organic:hover .modern-org-info {
+    display: block;
+}
+
+.modern-organic:hover .triple-slider {
+    opacity: 1;
 }
 /*Catalog Авеню*/
 .avenue {
@@ -728,6 +803,41 @@ input[type="checkbox"]:checked:hover + label::before {
     margin-right: 80px;
     margin-bottom: 80px;
 }
+
+.avenue-info {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    
+    width: 200px;
+    height: 200px;
+    
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.avenue-info h3 {
+    font-size: 18px;
+    line-height: 18px;
+    margin-top: 36px;
+    margin-bottom: 18px;
+}
+
+.avenue-info p {
+    width: 200px;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 28px;
+}
+
+.avenue:hover .avenue-info {
+    display: block;
+}
+
+.avenue:hover .triple-slider {
+    opacity: 1;
+}
 /*Catalog Давтейл*/
 .dovetail {
     float: right;
@@ -735,6 +845,41 @@ input[type="checkbox"]:checked:hover + label::before {
     
     width: 240px;
     height: 270px;
+}
+
+.dovetail-info {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    
+    width: 200px;
+    height: 200px;
+    
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.dovetail-info h3 {
+    font-size: 18px;
+    line-height: 18px;
+    margin-top: 36px;
+    margin-bottom: 18px;
+}
+
+.dovetail-info p {
+    width: 200px;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 28px;
+}
+
+.dovetail:hover .dovetail-info {
+    display: block;
+}
+
+.dovetail:hover .triple-slider {
+    opacity: 1;
 }
 /*Catalog Переключатели страниц*/
 .pages {
@@ -753,7 +898,7 @@ input[type="checkbox"]:checked:hover + label::before {
     font-size: 12px;
     line-height: 38px;
     text-align: center;
-    vertical-align: middle;
+    vertical-align: top;
     text-decoration: none;
   
     border-radius: 3px;
@@ -970,6 +1115,18 @@ input[type="checkbox"]:checked:hover + label::before {
     margin-bottom: 26px;
 }
 
+.order:nth-child(1) .img-order {
+    background-color: #fb565a;
+}
+
+.order:nth-child(2) .img-order {
+    background-color: #00ca74;
+}
+
+.order:nth-child(3) .img-order {
+    background-color: #efc84a;
+}
+
 .img-order img {
     width: 240px;
     height: 124px;
@@ -1117,7 +1274,6 @@ hr {
 }
 
 .logo-main {
-    position: relative;
     margin: 0 auto;
     width: 187px;
     height: 75px;
@@ -1174,8 +1330,6 @@ hr {
 }
 /*Index Блок с партнерами*/
 .partners {
-    position: relative;
-    
     min-height: 91px;
 }
 
@@ -1184,6 +1338,7 @@ hr {
     
     width: 220px;
     margin-right: 100px;
+  
     opacity: 0.2;
 }
 
@@ -1195,14 +1350,13 @@ hr {
     opacity: 1;
 }
 
-.partner:nth-child(1) {
-    position: relative;
-    top: 23px;
+.partner:nth-child(1) { /*23 top*/
+    margin-top: 23px;
+    margin-left: 12px;
 }
 
 .partner:nth-child(2) {
-    position: relative;
-    top: 10px;
+    margin-top: 10px;
 }
 
 .partner:last-child {
@@ -1218,11 +1372,14 @@ hr {
 }
 
 .map {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    margin-left: -600px;
+    width: 100%;
+    min-height: 416px;
+    max-width: 1199px;
+    margin: 0 auto;
     z-index: -1;
+    background-color: #b5b5b5;
+    background-image: url(../img/map.jpg);
+    background-position: center;
 }
 
 .footer-contacts {
@@ -1238,6 +1395,8 @@ hr {
     display: inline-block;
     margin-left: 19px;
     margin-top: 27px;
+  
+    vertical-align: top;
 }
 
 .footer-contacts b {
@@ -1343,7 +1502,7 @@ hr {
 /*Всплывающий блок отправки письма*/
 @keyframes move-block {
     0% {
-        transform: translateY(-350px);
+        transform: translateY(-335px);
     }
     100% {
         transform: translateY(0);
@@ -1466,6 +1625,8 @@ hr {
 .name-block,
 .email-block {
     display: inline-block;
+  
+  vertical-align: top;
 }
 
 .message-form textarea {
